@@ -8,6 +8,8 @@ import androidx.navigation.NavHostController
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.compose.foundation.layout.padding
+import com.example.navigasiku.view.FormIsian
+import com.example.navigasiku.view.TampilData
 
 enum class Navigasi {
     Formulir,
@@ -28,7 +30,7 @@ fun DataApp(
             composable(route = Navigasi.Formulir.name) {
                 FormIsian(
                     // pilihanJK = JenisK.map { id -> konteks.resources.getString(id) },
-                    onSubmitClick = {
+                    OnSubmitBtnClick = {
                         navController.navigate(route = Navigasi.Detail.name)
                     }
                 )
